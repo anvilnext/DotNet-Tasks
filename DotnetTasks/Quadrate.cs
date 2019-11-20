@@ -8,7 +8,12 @@ namespace DotnetTasks
 {
     class Quadrate
     {
-        public int side;
+        private readonly int side;
+
+        public Quadrate(int side)
+        {
+            this.side = side;
+        }
 
         public int Perimeter()
         {

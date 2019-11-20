@@ -8,8 +8,14 @@ namespace DotnetTasks
 {
     class ArProgression
     {
-        public int a1;
-        public int d;
+        private readonly int a1;
+        private readonly int d;
+
+        public ArProgression(int a1, int d)
+        {
+            this.a1 = a1;
+            this.d = d;
+        }
         
         public int GetNItem(int n)
         {
