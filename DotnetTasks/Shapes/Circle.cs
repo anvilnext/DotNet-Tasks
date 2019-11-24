@@ -6,22 +6,24 @@ using System.Threading.Tasks;
 
 namespace DotnetTasks.Shapes
 {
-    class Circle : Shape
+    class Circle : IShape
     {
         string Type { get; set; }
+        int Radius { get; set; }
 
         //r for radius
-        public Circle(string t, int r) : base("circle", r)
+        public Circle(string t, int r)
         {
             Type = t;
+            Radius = r;
         }
 
-        public override double GetArea()
+        public double GetArea()
         {
-            return (Width * Math.Pow((Math.PI), 2));
+            return (Radius * Math.Pow((Math.PI), 2));
         }
 
-        public override string GetName()
+        public string GetName()
         {
             return Type;
         }

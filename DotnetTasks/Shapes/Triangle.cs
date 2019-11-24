@@ -6,28 +6,26 @@ using System.Threading.Tasks;
 
 namespace DotnetTasks.Shapes
 {
-    class Triangle : Shape
+    class Triangle : IShape
     {
         string Type { get; set; }
+        int a { get; set; }
+        int b { get; set; }
 
         //triangle with 2 different sides and height
-        public Triangle(string t, int a, int b, int h) : base("triangle", a, b, h)
+        public Triangle(string t, int a, int b, int h)
         {
             Type = t;
+            this.a = a;
+            this.b = b;
         }
 
-        //triangle with 1 defined side and height
-        public Triangle(string t, int a, int h) : base("triangle", a, h)
+        public double GetArea()
         {
-            Type = t;
+            return (a * b) / 2;
         }
 
-        public override double GetArea()
-        {
-            return (Width * Height) / 2;
-        }
-
-        public override string GetName()
+        public string GetName()
         {
             return Type;
         }

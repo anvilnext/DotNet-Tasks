@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace DotnetTasks.Shapes
 {
-    class IsoscelesTriangle : Triangle
+    interface IShape
     {
-        public IsoscelesTriangle(string name, int a, int h) : base("isosceles triangle", a, a, h) { }
+        string GetName();
+        double GetArea();
     }
 }
