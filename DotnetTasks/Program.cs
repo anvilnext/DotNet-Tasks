@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassLibrary1;
+using DotnetTasks.Shapes;
 
 namespace DotnetTasks
 {
@@ -13,26 +14,35 @@ namespace DotnetTasks
 
         static void Main(string[] args)
         {
-            //6 Matrix
-            const int size = 2;
-            const int size2 = 2;
-            Matrix m = new Matrix(size);
-            Matrix n = new Matrix(size);
-            for (int i = 0; i < size; i++)
-            {
-                for (int j = 0; j < size; j++)
-                {
-                    m[i, j] = rand.Next(10);
-                    n[i, j] = rand.Next(10);
-                }
-            }
-            m.Print();
-            Console.WriteLine();
-            n.Print();
-            Console.WriteLine();
-            m.Multiply(n).Print();
+            //7-1 Shapes
+            Circle shape = new Circle("circle", 4);
+            Console.WriteLine(shape.GetName());
+            Console.WriteLine(Math.Round(shape.GetArea(), 2));
+            IsoscelesTriangle it = new IsoscelesTriangle("triangle", 4, 2);
+            Console.WriteLine(it.GetName());
+            Console.WriteLine(it.GetArea());
             Console.ReadLine();
-            
+
+            //6 Matrix
+            //const int size = 2;
+            //const int size2 = 2;
+            //Matrix m = new Matrix(size);
+            //Matrix n = new Matrix(size);
+            //for (int i = 0; i < size; i++)
+            //{
+            //    for (int j = 0; j < size; j++)
+            //    {
+            //        m[i, j] = rand.Next(10);
+            //        n[i, j] = rand.Next(10);
+            //    }
+            //}
+            //m.Print();
+            //Console.WriteLine();
+            //n.Print();
+            //Console.WriteLine();
+            //m.Multiply(n).Print();
+            //Console.ReadLine();
+
             //5-2 Polynom
             //const int degree1 = 3;
             //const int degree2 = 2;
